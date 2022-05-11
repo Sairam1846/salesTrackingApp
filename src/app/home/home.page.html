@@ -1,20 +1,44 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-app>
+  <ion-header>
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-row>
+        <img
+          class="circle-pic"
+          src="http://autokadabra.ru/system/uploads/users/18/18340/small.png?1318432918"
+        />
+        <ion-col class="name">John Smith</ion-col>
+        <ion-col>Sales & Revenue Dashboard</ion-col>
+        <ion-col style="padding-left: 350px">
+          {{dateTime | date: 'MMM d, y'}}</ion-col
+        >
+      </ion-row>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
+  <ion-split-pane contentId="main" class="navigation">
+    <!--  the side menu  -->
+    <ion-menu contentId="main">
+      <ion-list contentId="content">
+        <ion-menu-toggle auto-hide="false" *ngFor="let p of pages">
+          <ion-item
+            [routerLink]="p.url"
+            routerDirection="root"
+            [class.active-item]="selectedPath === p.url"
+            class="navigation-item"
+          >
+            <ion-icon
+              slot="start"
+              [name]="p.ionicIcon? p.ionicIcon:''"
+            ></ion-icon>
+            {{p.title}} <br />
+            {{p.title1}}
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-menu>
+
+    <!-- the main content -->
+
+    <ion-router-outlet id="main"> </ion-router-outlet>
+  </ion-split-pane>
+</ion-app>
