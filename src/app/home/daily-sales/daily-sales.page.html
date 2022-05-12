@@ -1,9 +1,17 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>daily-sales</ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content>
+  <div class="row header">
+    <div class="col">Region</div>
+    <div class="col">Sector</div>
+    <div class="col">Channel</div>
+    <div class="col">Units</div>
+    <div class="col">Amount</div>
+  </div>
+  <div class="row" *ngFor="let data of datas">
+    <div class="col">{{data.region}}</div>
+    <div class="col">{{data.sector}}</div>
+    <div class="col">{{data.channel}}</div>
+    <div class="col">{{data.units}}</div>
+    <div class="col">{{data.amount}}</div>
 
-</ion-content>
+  </div>
+

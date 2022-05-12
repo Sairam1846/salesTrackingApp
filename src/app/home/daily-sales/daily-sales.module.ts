@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { DailySalesPageRoutingModule } from './daily-sales-routing.module';
 
 import { DailySalesPage } from './daily-sales.page';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    DailySalesPageRoutingModule
+    DailySalesPageRoutingModule,
+    HttpClientModule
   ],
   declarations: [DailySalesPage]
 })

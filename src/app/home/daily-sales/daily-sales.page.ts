@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../../data.service';
 
 @Component({
   selector: 'app-daily-sales',
@@ -6,10 +7,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./daily-sales.page.scss'],
 })
 export class DailySalesPage implements OnInit {
+  fullData: any;
+  region: any;
+  sector: any;
+  channel: any;
+  units: any;
+  amount: any;
+  datas: any;
 
-  constructor() { }
+  constructor(private data: DataService) { }
 
   ngOnInit() {
+    this.getAllData();
   }
 
+getAllData(){
+  this.data.getdata().subscribe(res => {
+    this.fullData = res;
+  });
+}
 }

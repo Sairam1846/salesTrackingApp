@@ -1,0 +1,60 @@
+{
+  "datas": [
+    {
+      "region": "North America",
+      "sector": "Manufacturing",
+      "channel": "direct",
+      "units":400,
+      "amount":"$200000"
+    },
+    {
+      "region": "South America",
+      "sector": "Telecom",
+      "channel": "direct",
+      "units":359,
+      "amount":"$800000"
+    },
+    {
+      "region": "Australia",
+      "sector": "Insurance",
+      "channel": "direct",
+      "units":500,
+      "amount":"$250000"
+    },
+    {
+      "region": "South America",
+      "sector": "Energy",
+      "channel": "direct",
+      "units":250,
+      "amount":"$290000"
+    },
+    {
+      "region": "North America",
+      "sector": "Telecom",
+      "channel": "direct",
+      "units":320,
+      "amount":"$320000"
+    },
+    {
+      "region": "Asia",
+      "sector": "Manufacturing",
+      "channel": "direct",
+      "units":560,
+      "amount":"$520000"
+    },
+    {
+      "region": "North America",
+      "sector": "Insurance",
+      "channel": "direct",
+      "units":450,
+      "amount":"$620000"
+    },
+    {
+      "region": "Europe",
+      "sector": "Energy",
+      "channel": "direct",
+      "units":600,
+      "amount":"$920000"
+    }
+  ]
+}
